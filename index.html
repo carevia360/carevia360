@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Pink Bubble Care Page</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Carevia360</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Carevia360 — demo site for testing GitHub Pages and custom domain" />
 </head>
 <body>
-
+  <header class="site-header">
     <div class="container">
-        <h1>Welcome to Your Bubble of Peace 🌸</h1>
-        <p class="quote">"Be gentle with yourself. You’re doing the best you can."</p>
-        <p class="quote">"Every day is a new beginning — breathe and start again."</p>
-        <p class="quote">"You deserve love, care, and kindness—especially from yourself."</p>
+      <h1>Carevia360</h1>
+      <p class="tagline">Simple demo site — GitHub Pages test</p>
     </div>
+  </header>
 
+  <main class="container">
+    <section class="hero">
+      <h2>Welcome to Carevia360</h2>
+      <p>This is a minimal static site to verify your GitHub Pages + custom domain setup.</p>
+      <a class="btn" href="#about">Get Started</a>
+    </section>
+
+    <section id="about" class="card">
+      <h3>About this test</h3>
+      <p>
+        This repo contains a basic index.html and stylesheet. If GitHub Pages is enabled and DNS is correct,
+        your site will be served at <strong>www.carevia360.com</strong>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Carevia360 — Demo</small>
+    </div>
+  </footer>
+
+  <script>
+    // set current year
+    document.getElementById('year').innerText = new Date().getFullYear();
+  </script>
 </body>
 </html>
