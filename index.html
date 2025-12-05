@@ -1,45 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Carevia360</title>
-  <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Carevia360 — demo site for testing GitHub Pages and custom domain" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Static Website</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <header class="site-header">
+
     <div class="container">
-      <h1>Carevia360</h1>
-      <p class="tagline">Simple demo site — GitHub Pages test</p>
+
+        <h1 class="title">My Document</h1>
+
+        <!-- PUT YOUR CLOUDINARY / PDF IMAGE LINK HERE -->
+        <a href="https://res.cloudinary.com/dahet3o6x/image/upload/v1764913099/PDFReader_Convert_20251205_110502_1_tqgjia.png" target="_blank">
+            <img src="https://res.cloudinary.com/dahet3o6x/image/upload/v1764913099/PDFReader_Convert_20251205_110502_1_tqgjia.png" class="preview-img" alt="Document Preview">
+        </a>
+
+        <div class="socials">
+            <a href="https://wa.me/YOUR_NUMBER" class="btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://linkedin.com/in/YOUR_PROFILE" class="btn linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="https://instagram.com/YOUR_USERNAME" class="btn instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+
     </div>
-  </header>
 
-  <main class="container">
-    <section class="hero">
-      <h2>Welcome to Carevia360</h2>
-      <p>This is a minimal static site to verify your GitHub Pages + custom domain setup.</p>
-      <a class="btn" href="#about">Get Started</a>
-    </section>
-
-    <section id="about" class="card">
-      <h3>About this test</h3>
-      <p>
-        This repo contains a basic index.html and stylesheet. If GitHub Pages is enabled and DNS is correct,
-        your site will be served at <strong>www.carevia360.com</strong>.
-      </p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <small>&copy; <span id="year"></span> Carevia360 — Demo</small>
-    </div>
-  </footer>
-
-  <script>
-    // set current year
-    document.getElementById('year').innerText = new Date().getFullYear();
-  </script>
 </body>
 </html>
