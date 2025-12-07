@@ -1,107 +1,334 @@
-/* ------------------ GLOBAL ------------------ */
+/* ===========================================================
+   RESET + GLOBAL
+   =========================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    background: #f6f7fb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
 }
 
-/* ------------------ CENTER CONTAINER ------------------ */
-.container {
-    width: 92%;
-    max-width: 500px;
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: 0px 8px 25px rgba(0,0,0,0.10);
-    text-align: center;
-    animation: fadeIn 0.7s ease-in-out;
+/* GENERAL SPACING BETWEEN ALL MAIN CONTAINERS */
+.container1,
+.container2,
+.container3,
+.container4,
+.container5,
+.container6,
+.container7,
+.container8,
+.container9 {
+  margin-bottom: 60px;        /* breathing space */
 }
 
-.title {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
+
+/* ===========================================================
+   HEADER
+   =========================================================== */
+.top-header {
+  width: 100%;
+  background: #fff;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
 }
 
-/* ------------------ DOCUMENT PREVIEW ------------------ */
-.preview-img {
-    width: 100%;
-    border-radius: 15px;
-    border: 1px solid #ddd;
-    transition: 0.3s;
+.logo img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
 }
 
-.preview-img:hover {
-    transform: scale(1.02);
+/* Toggle row */
+.toggle-row {
+  width: 100%;
+  background: #fff;
+  padding: 15px 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  border-top: 2px solid #ddd;
 }
 
-/* ------------------ SOCIAL BUTTONS ------------------ */
-.socials {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+/* Hamburger button */
+.toggle-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: 0.3s ease;
 }
 
-.btn {
-    width: 50px;
-    height: 50px;
-    background: #eee;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
+.bar {
+  width: 30px;
+  height: 3px;
+  background: black;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+.toggle-btn.active .top {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.toggle-btn.active .middle {
+  opacity: 0;
+}
+.toggle-btn.active .bottom {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Social icons */
+.social-icons {
+  display: none;
+  gap: 12px;
+  align-items: center;
+}
+
+.social-icons a {
+  width: 24px;
+  height: 24px;
+  background: black;
+  border-radius: 50%;
+}
+
+
+/* ===========================================================
+   CONTAINER 1
+   =========================================================== */
+.container1 {
+  position: relative;
+  padding: 140px 20px;
+  background: url('bgimg.jpg') center/cover no-repeat;
+  text-align: center;
+  color: white;
+}
+
+.container1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.container1 h1,
+.container1 p {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ===========================================================
+   CONTAINER 2 (50–50 LAYOUT)
+   =========================================================== */
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+.c2-left,
+.c2-right {
+  width: 50%;
+  text-align: center;
+}
+
+.c2-img {
+  width: 100%;
+  max-width: 380px;
+  margin-top: 15px;
+}
+
+
+/* ===========================================================
+   CONTAINER 3
+   =========================================================== */
+.container3 {
+  padding: 40px 20px;
+}
+
+.c3-top {
+  margin-bottom: 40px;
+}
+
+.c3-top h1 {
+  margin-bottom: 8px;
+}
+
+.c3-middle {
+  display: flex;
+  gap: 40px;
+}
+
+.c3-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.c3-left .c3-box h1 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.c3-left .c3-box h2,
+.c3-left .c3-box h3,
+.c3-left .c3-box h4 {
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+
+.c3-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.c3-img {
+  width: 100%;
+  max-width: 420px;
+}
+
+
+/* ===========================================================
+   CONTAINER 4
+   =========================================================== */
+.container4 {
+  padding: 20px;
+}
+
+.c4-top {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.c4-middle {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+}
+
+.c4-img {
+  width: 100%;
+  max-width: 350px;
+}
+
+.c4-divider {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+
+/* ===========================================================
+   CONTAINER 5
+   =========================================================== */
+.container5 {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.c5-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.c5-flex {
+  display: flex;
+}
+
+.c5-left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.c5-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c5-left-img {
+  width: 100%;
+  height: auto;
+}
+
+.c5-para {
+  font-size: 18px;
+  text-align: justify;
+}
+
+
+/* ===========================================================
+   CONTAINER 6
+   =========================================================== */
+.container6-img {
+  width: 100%;
+  display: block;
+}
+
+
+/* ===========================================================
+   CONTAINER 7
+   =========================================================== */
+.container7 {
+  text-align: center;
+  padding: 40px;
+}
+
+
+/* ===========================================================
+   CONTAINER 8 (FOOTER BLOCK)
+   =========================================================== */
+.container8 {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+
+/* WhatsApp Button – Clean & Small */
+.whatsapp-btn {
+    display: inline-block !important;
+    width: auto !important;
+    background-color: #25D366;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 22px;
     text-decoration: none;
-    color: #ffffff;
-    transition: .3s;
+    border-radius: 6px;
+    transition: 0.2s ease;
+    text-align: center;
+    margin: 0 auto;
 }
 
-.whatsapp { background: #25d366; }
-.linkedin { background: #0077b5; }
-.instagram { background: #e1306c; }
-
-.btn:hover {
-    transform: scale(1.1);
+.whatsapp-btn:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.03);
 }
 
-/* ------------------ MOBILE-FIRST (Android Mode) ------------------ */
-@media (max-width: 480px) {
-    .container {
-        width: 94%;
-        padding: 20px;
-    }
-    .title {
-        font-size: 22px;
-    }
-}
 
-/* ------------------ DESKTOP VIEW ------------------ */
-@media (min-width: 768px) {
-    body {
-        background: linear-gradient(135deg, #e8eeff, #ffffff);
-    }
-    .container {
-        max-width: 650px;
-        padding: 35px;
-    }
-    .title {
-        font-size: 28px;
-    }
-    .btn {
-        width: 55px;
-        height: 55px;
-        font-size: 26px;
-    }
-}
-
-/* ------------------ ANIMATION ------------------ */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0px); }
+/* ===========================================================
+   CONTAINER 9
+   =========================================================== */
+.container9 {
+  height: 80px;
 }
